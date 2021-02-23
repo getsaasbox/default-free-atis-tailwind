@@ -1,166 +1,157 @@
 doctype html
-html(lang="en")
-    head
-        title Page title
-        meta(charset="utf-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-        meta(name="description" content="")
-        meta(name="author" content="")
-        link(rel="stylesheet" href="css/tailwind/tailwind-theme.css")
-        link(rel="icon" href="favicon.ico")
-        link(rel="icon" type="image/png" sizes="16x16" href="favicon.png")
-        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap")
-        script(src="js/main.js")
-    body.antialiased.bg-body.text-body.font-body
-        div
-
-
-            section
-                nav(class="relative px-6 py-6 flex justify-between items-center bg-gray-900")
-                    a(href="#", class="text-white text-3xl font-bold leading-none")
-                        img(src="atis-assets/logo/atis/atis-mono-white.svg", alt="", class="h-12", width="auto")
-                    div(class="lg:hidden")
-                        button(class="navbar-burger flex items-center text-white p-3")
-                            svg(class="block h-4 w-4 fill-current", viewbox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
-                                title Mobile menu
-                                path(d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z")
-                    ul(class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6")
-                        li
-                            a(href="#", class="text-sm text-gray-300 hover:text-white") Start
-                        li(class="text-gray-800")
-                            svg(class="w-4 h-4 current-fill", xmlns="http://www.w3.org/2000/svg", fill="none", viewbox="0 0 24 24", stroke="currentColor")
-                                path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z")
-                        li
-                            a(href="#", class="text-sm text-white font-bold") About Us
-                        li(class="text-gray-800")
-                            svg(class="w-4 h-4 current-fill", xmlns="http://www.w3.org/2000/svg", fill="none", viewbox="0 0 24 24", stroke="currentColor")
-                                path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z")
-                        li
-                            a(href="#", class="text-sm text-gray-300 hover:text-white") Services
-                        li(class="text-gray-800")
-                            svg(class="w-4 h-4 current-fill", xmlns="http://www.w3.org/2000/svg", fill="none", viewbox="0 0 24 24", stroke="currentColor")
-                                path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z")
-                        li
-                            a(href="#", class="text-sm text-gray-300 hover:text-white") Platform
-                        li(class="text-gray-800")
-                            svg(class="w-4 h-4 current-fill", xmlns="http://www.w3.org/2000/svg", fill="none", viewbox="0 0 24 24", stroke="currentColor")
-                                path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z")
-                        li
-                            a(href="#", class="text-sm text-gray-300 hover:text-white") Testimonials
-                    a(href="#" class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-white font-bold border-2 border-gray-800 hover:border-gray-700 rounded-l-xl rounded-t-xl transition duration-200") Sign In
-                    a(href="#" class="hidden lg:inline-block py-2 px-6 bg-green-500 hover:bg-green-600 text-sm text-white font-bold rounded-l-xl rounded-t-xl transition duration-200") Sign up
-
-                div(class="hidden navbar-menu relative z-50")
-                    div(class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25")
-                    nav(class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto")
-                        div(class="flex items-center mb-8")
-                            a(href="#", class="mr-auto text-3xl font-bold leading-none")
-                                img(src="atis-assets/logo/atis/atis-mono-black.svg", alt="", width="auto", class="h-10")
-                            button(class="navbar-close")
-                                svg(class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500", xmlns="http://www.w3.org/2000/svg", fill="none", viewbox="0 0 24 24", stroke="currentColor")
-                                    path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M6 18L18 6M6 6l12 12")
-                        div
-                            ul
-                                li(class="mb-1")
-                                    a(href="#", class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded") Start
-                                li(class="mb-1")
-                                    a(href="#", class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded") About Us
-                                li(class="mb-1")
-                                    a(href="#", class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded") Services
-                                li(class="mb-1")
-                                    a(href="#", class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded") Platform
-                                li(class="mb-1")
-                                    a(href="#", class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded") Testimonials
-                            
-                        div(class="mt-auto")
-                            div(class="pt-6")
-                                a(href="#", class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-l-xl rounded-t-xl") Sign in
-                                a(href="#", class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-green-600 hover:bg-green-700 rounded-l-xl rounded-t-xl") Sign Up
-
-                            p(class="my-4 text-xs text-center text-gray-400")
-                                span &copy; 2020 All rights reserved.
-                            div(class="text-center")
-                                a(href="#", class="inline-block px-1")
-                                    img(src="atis-assets/social/facebook.svg", alt="")
-                                a(href="#", class="inline-block px-1")
-                                    img(src="atis-assets/social/twitter.svg", alt="")
-                                a(href="#", class="inline-block px-1")
-                                    img(src="atis-assets/social/instagram.svg", alt="")
-
-            section(class="py-10 lg:py-20 bg-gray-800")
-                div(class="container mx-auto px-4")
-                    div(class="max-w-xl mx-auto")
-                        div(class="mb-10")
-                            a(class="text-white text-3xl font-bold leading-none", href="#")
-                                img(class="h-12 mx-auto", src="atis-assets/logo/atis/atis-mono-light.svg", alt="", width="auto")
-                        div(class="p-6 lg:p-12 mb-6 bg-gray-900 shadow-md rounded")
-                            div(class="mb-6")
-                                span(class="text-gray-500") Sign Up
-                                h3(class="text-2xl font-bold text-white") Create an account
-                            form(action="")
-                                div(class="flex flex-wrap -mx-2")
-                                    div(class="mb-3 w-full lg:w-1/2 px-2")
-                                        input(class="w-full p-4 text-xs text-gray-50 bg-gray-800 outline-none rounded", type="text", placeholder="First Name", autocomplete="off", style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAnVJREFUWAntVzuL4lAUPokBsVB0t9odK8VCLCal3Q4WbmUpCFv6DyymEmys9gf4B4RlS7GwEWQsBAsL195q2J3KWIiVrz0nJBcTk9yr3jCw7AG5j3PO9325j2OiAFq73X7Y7/ffsft0Op0+05wsUxTlD2K9aJr23Gw2f7txFYv8FxJ/dDtljlHICkU8ukWo9ORhk9ODEIe1yo7nUnH05JgJd3DBpcre8yD9Xly0Au9q/7aAfD4PjUYDqPWzUFegUChAIpEAav0sVAF4901eu/USEaoAL0L3nENANBqFbDYLqVTKHQe3+i6AXBOaPU4mk1Cv1yEej8PxeIR+vw/z+dx03+qzsYNatgLFYtEkp2BVVaFUKrG8W30MIKDDBATEhOpiAqbTKWw2G5OMtmA0GjHiW30MIKCjtFqtk+2ng5ZOp8EwDFiv1/a02Qb5HIGcAV7JNwwZW+8Hrw4BnFypbhRioAidbYFUdAEw/Gf8QO8H7ybA0viF1QEB0cIhmUwGqtUqxGIxM2cymcBwOLzIx1X4JF0A1YxyuWzWkgtGjwlpAiKRCFQqFdB13YPGf0qagFqtBrlczmSiOkJGFZVnKl4Hem+/26hYEfHhcIBerwe73U4IkyS+CEVygpbLJQwGA+h2u7BYLIC2RMSwFmjPeB+/4om8+8NkNpsxzqCXEBaEHZW+VFDEIyb8kLUd5wS8vnkIrc+lb7xg8p//d4jE82L4x5SHcKf/v4CrCxEe1Deq4byVX61WrBBtt1vPcMK6WgAijfFX80Q8m+x0Omcj3+746jNAdQOVG76Qgg7CIKyrBeCVfcVEHQF+0hIK8rEwyqFcwiCsv+R847qxq2vXAAAAAElFTkSuQmCC"); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;')
-                                    div(class="mb-3 w-full lg:w-1/2 px-2")
-                                        input(class="w-full p-4 text-xs text-gray-50 bg-gray-800 outline-none rounded", type="text", placeholder="Last Name")
-                                div(class="mb-3 flex p-4 bg-gray-800 rounded")
-                                    input(class="w-full text-xs text-gray-50 bg-gray-800 outline-none", type="email", placeholder="name@email.com")
-                                    svg(class="h-6 w-6 ml-4 my-auto text-gray-300", xmlns="http://www.w3.org/2000/svg", fill="none", viewbox="0 0 24 24", stroke="currentColor")
-                                        path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207")
-                                div(class="mb-6 flex p-4 bg-gray-800 rounded")
-                                    input(class="w-full text-xs text-gray-50 bg-gray-800 outline-none", type="password", placeholder="Enter your password", autocomplete="off", style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAnVJREFUWAntVzuL4lAUPokBsVB0t9odK8VCLCal3Q4WbmUpCFv6DyymEmys9gf4B4RlS7GwEWQsBAsL195q2J3KWIiVrz0nJBcTk9yr3jCw7AG5j3PO9325j2OiAFq73X7Y7/ffsft0Op0+05wsUxTlD2K9aJr23Gw2f7txFYv8FxJ/dDtljlHICkU8ukWo9ORhk9ODEIe1yo7nUnH05JgJd3DBpcre8yD9Xly0Au9q/7aAfD4PjUYDqPWzUFegUChAIpEAav0sVAF4901eu/USEaoAL0L3nENANBqFbDYLqVTKHQe3+i6AXBOaPU4mk1Cv1yEej8PxeIR+vw/z+dx03+qzsYNatgLFYtEkp2BVVaFUKrG8W30MIKDDBATEhOpiAqbTKWw2G5OMtmA0GjHiW30MIKCjtFqtk+2ng5ZOp8EwDFiv1/a02Qb5HIGcAV7JNwwZW+8Hrw4BnFypbhRioAidbYFUdAEw/Gf8QO8H7ybA0viF1QEB0cIhmUwGqtUqxGIxM2cymcBwOLzIx1X4JF0A1YxyuWzWkgtGjwlpAiKRCFQqFdB13YPGf0qagFqtBrlczmSiOkJGFZVnKl4Hem+/26hYEfHhcIBerwe73U4IkyS+CEVygpbLJQwGA+h2u7BYLIC2RMSwFmjPeB+/4om8+8NkNpsxzqCXEBaEHZW+VFDEIyb8kLUd5wS8vnkIrc+lb7xg8p//d4jE82L4x5SHcKf/v4CrCxEe1Deq4byVX61WrBBtt1vPcMK6WgAijfFX80Q8m+x0Omcj3+746jNAdQOVG76Qgg7CIKyrBeCVfcVEHQF+0hIK8rEwyqFcwiCsv+R847qxq2vXAAAAAElFTkSuQmCC"); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;')
-                                    button
-                                        svg(class="h-6 w-6 ml-4 my-auto text-gray-300", xmlns="http://www.w3.org/2000/svg", fill="none", viewbox="0 0 24 24", stroke="currentColor")
-                                            path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M15 12a3 3 0 11-6 0 3 3 0 016 0z")
-                                            path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z")
-                                div(class="text-center")
-                                    button(class="mb-2 w-full py-4 bg-green-600 hover:bg-green-700 rounded text-sm font-bold text-gray-50 transition duration-200") Sign Up
-                                    span(class="text-gray-400 text-xs")
-                                        span Already have an account?
-                                        a(class="text-green-600 hover:underline", href="#") Sign In
-                                    a(class="mt-8 mb-4 p-4 flex justify-center items-center border rounded hover:bg-gray-800", href="#")
-                                        img(class="mr-4", src="atis-assets/social/facebook-logo.png", alt="")
-                                        span(class="text-xs text-gray-500 font-bold") Sign Up with Facebook
-                                    a(class="p-4 mb-4 flex justify-center items-center border rounded hover:bg-gray-800", href="#")
-                                        img(class="mr-4", src="atis-assets/social/google-logo.png", alt="")
-                                        span(class="text-xs text-gray-500 font-bold") Sign Up with Google
-                                    a(class="p-4 flex justify-center items-center border rounded hover:bg-gray-800", href="#")
-                                        img(class="mr-4", src="atis-assets/social/twitter-logo.png", alt="")
-                                        span(class="text-xs text-gray-500 font-bold") Sign Up with Twitter
-                        p(class="text-xs text-center text-gray-400")
-                            a(class="underline hover:text-gray-500", href="#") Policy privacy
-                            |  and 
-                            a(class="underline hover:text-gray-500", href="#") Terms of Use
-
-
-            section(class="bg-gray-900")
-                div(class="flex w-full")
-                    div(class="w-1/3 flex")
-                        div(class="w-1/3 py-1 bg-green-400")
-                        div(class="w-1/3 py-1 bg-green-500")
-                        div(class="w-1/3 py-1 bg-green-600")
-                    div(class="w-1/3 flex")
-                        div(class="w-1/3 py-1 bg-green-400")
-                        div(class="w-1/3 py-1 bg-green-500")
-                        div(class="w-1/3 py-1 bg-green-600")
-                    div(class="w-1/3 flex")
-                        div(class="w-1/3 py-1 bg-green-400")
-                        div(class="w-1/3 py-1 bg-green-500")
-                        div(class="w-1/3 py-1 bg-green-600")
-                div(class="container mx-auto px-4")
-                    div(class="pt-10 pb-12")
-                        div(class="relative lg:pb-8 mb-8 flex flex-wrap lg:border-b lg:border-gray-800")
-                            p(class="w-full lg:w-auto text-gray-400 text-sm text-center lg:text-left order-last lg:order-first") &copy; 2021. All rights reserved.
-                            div(class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 mb-6 lg:mb-0 mx-auto")
-                                a(href="#", class="mr-6 text-sm hover:text-gray-500") Terms of Service
-                                a(href="#", class="text-sm hover:text-gray-500") Police Privacy
-                            div(class="mb-12 lg:mb-0 lg:ml-auto w-full lg:w-auto order-first lg:order-last text-center lg:text-left")
-                                a(href="#", class="inline-block text-white text-xl font-bold leading-none")
-                                    img(src="atis-assets/logo/atis/atis-mono-white.svg" alt="" class="inline-block h-12 lg:h-6", width="auto")
-                        div(class="flex justify-center")
-                            a(class="inline-block w-10 mr-2 p-2 bg-gray-800 hover:bg-gray-700 rounded", href="#")
-                                img(class="mx-auto", src="atis-assets/social/facebook.svg")
-                            a(class="inline-block w-10 mr-2 p-2 bg-gray-800 hover:bg-gray-700 rounded", href="#")
-                                img(class="mx-auto", src="atis-assets/social/twitter.svg")
-                            a(class="inline-block w-10 p-2 bg-gray-800 hover:bg-gray-700 rounded", href="#")
-                                img(class="mx-auto", src="atis-assets/social/instagram.svg")
+html(lang='en')
+  head
+    title Page title
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1,shrink-to-fit=no')
+    meta(name='description' content)
+    meta(name='author' content)
+    link(href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='css/tailwind/tailwind.min.css')
+    link(rel='icon' type='image/png' sizes='16x16' href='favicon-tailwind.png')
+    script(src='js/main.js')
+  body.antialiased.bg-body.text-body.font-body
+    div
+      section
+        nav.relative.px-6.py-6.flex.justify-between.items-center.bg-gray-900
+          a.text-white.text-3xl.font-bold.leading-none(href='#')
+            img.h-12(src='atis-assets/logo/atis/atis-mono-white.svg' alt width='auto')
+          .lg:hidden
+            button.navbar-burger.flex.items-center.text-white.p-3
+              svg.block.h-4.w-4.fill-current(viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg')
+                title Mobile menu
+                path(d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z')
+          ul.hidden.absolute.top-1/2.left-1/2.transform.-translate-y-1/2.-translate-x-1/2.lg:flex.lg:mx-auto.lg:flex.lg:items-center.lg:w-auto.lg:space-x-6
+            li
+              a.text-sm.text-gray-300.hover:text-white(href='#') Start
+            li.text-gray-800
+              svg.w-4.h-4.current-fill(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z')
+            li
+              a.text-sm.text-white.font-bold(href='#') About Us
+            li.text-gray-800
+              svg.w-4.h-4.current-fill(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z')
+            li
+              a.text-sm.text-gray-300.hover:text-white(href='#') Services
+            li.text-gray-800
+              svg.w-4.h-4.current-fill(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z')
+            li
+              a.text-sm.text-gray-300.hover:text-white(href='#') Platform
+            li.text-gray-800
+              svg.w-4.h-4.current-fill(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z')
+            li
+              a.text-sm.text-gray-300.hover:text-white(href='#') Testimonials
+          a.hidden.lg:inline-block.lg:ml-auto.lg:mr-3.py-2.px-6.text-sm.text-white.font-bold.border-2.border-gray-800.hover:border-gray-700.rounded-l-xl.rounded-t-xl.transition.duration-200(href='#') Sign In
+          a.hidden.lg:inline-block.py-2.px-6.bg-green-500.hover:bg-green-600.text-sm.text-white.font-bold.rounded-l-xl.rounded-t-xl.transition.duration-200(href='#') Sign up
+        .hidden.navbar-menu.relative.z-50
+          .navbar-backdrop.fixed.inset-0.bg-gray-800.opacity-25
+          nav.fixed.top-0.left-0.bottom-0.flex.flex-col.w-5/6.max-w-sm.py-6.px-6.bg-white.border-r.overflow-y-auto
+            .flex.items-center.mb-8
+              a.mr-auto.text-3xl.font-bold.leading-none(href='#')
+                img.h-10(src='atis-assets/logo/atis/atis-mono-black.svg' alt width='auto')
+              button.navbar-close
+                svg.h-6.w-6.text-gray-400.cursor-pointer.hover:text-gray-500(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                  path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12')
+            div
+              ul
+                li.mb-1
+                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover:bg-green-50.hover:text-green-600.rounded(href='#') Start
+                li.mb-1
+                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover:bg-green-50.hover:text-green-600.rounded(href='#') About Us
+                li.mb-1
+                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover:bg-green-50.hover:text-green-600.rounded(href='#') Services
+                li.mb-1
+                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover:bg-green-50.hover:text-green-600.rounded(href='#') Platform
+                li.mb-1
+                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover:bg-green-50.hover:text-green-600.rounded(href='#') Testimonials
+            .mt-auto
+              .pt-6
+                a.block.px-4.py-3.mb-3.leading-loose.text-xs.text-center.font-semibold.leading-none.bg-gray-50.hover:bg-gray-100.rounded-l-xl.rounded-t-xl(href='#') Sign in
+                a.block.px-4.py-3.mb-2.leading-loose.text-xs.text-center.text-white.font-semibold.bg-green-600.hover:bg-green-700.rounded-l-xl.rounded-t-xl(href='#') Sign Up
+              p.my-4.text-xs.text-center.text-gray-400
+                span © 2020 All rights reserved.
+              .text-center
+                a.inline-block.px-1(href='#')
+                  img(src='atis-assets/social/facebook.svg' alt)
+                a.inline-block.px-1(href='#')
+                  img(src='atis-assets/social/twitter.svg' alt)
+                a.inline-block.px-1(href='#')
+                  img(src='atis-assets/social/instagram.svg' alt)
+      section.py-10.lg:py-20.bg-gray-800
+        .container.mx-auto.px-4
+          .max-w-xl.mx-auto
+            .mb-10
+              a.text-white.text-3xl.font-bold.leading-none(href='#')
+                img.h-12.mx-auto(src='atis-assets/logo/atis/atis-mono-light.svg' alt width='auto')
+            .p-6.lg:p-12.mb-6.bg-gray-900.shadow-md.rounded
+              .mb-6
+                span.text-gray-500 Sign Up
+                h3.text-2xl.font-bold.text-white Create an account
+              form(action)
+                .flex.flex-wrap.-mx-2
+                  .mb-3.w-full.lg:w-1/2.px-2
+                    input.w-full.p-4.text-xs.text-gray-50.bg-gray-800.outline-none.rounded(type='text' placeholder='First Name' autocomplete='off' style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAnVJREFUWAntVzuL4lAUPokBsVB0t9odK8VCLCal3Q4WbmUpCFv6DyymEmys9gf4B4RlS7GwEWQsBAsL195q2J3KWIiVrz0nJBcTk9yr3jCw7AG5j3PO9325j2OiAFq73X7Y7/ffsft0Op0+05wsUxTlD2K9aJr23Gw2f7txFYv8FxJ/dDtljlHICkU8ukWo9ORhk9ODEIe1yo7nUnH05JgJd3DBpcre8yD9Xly0Au9q/7aAfD4PjUYDqPWzUFegUChAIpEAav0sVAF4901eu/USEaoAL0L3nENANBqFbDYLqVTKHQe3+i6AXBOaPU4mk1Cv1yEej8PxeIR+vw/z+dx03+qzsYNatgLFYtEkp2BVVaFUKrG8W30MIKDDBATEhOpiAqbTKWw2G5OMtmA0GjHiW30MIKCjtFqtk+2ng5ZOp8EwDFiv1/a02Qb5HIGcAV7JNwwZW+8Hrw4BnFypbhRioAidbYFUdAEw/Gf8QO8H7ybA0viF1QEB0cIhmUwGqtUqxGIxM2cymcBwOLzIx1X4JF0A1YxyuWzWkgtGjwlpAiKRCFQqFdB13YPGf0qagFqtBrlczmSiOkJGFZVnKl4Hem+/26hYEfHhcIBerwe73U4IkyS+CEVygpbLJQwGA+h2u7BYLIC2RMSwFmjPeB+/4om8+8NkNpsxzqCXEBaEHZW+VFDEIyb8kLUd5wS8vnkIrc+lb7xg8p//d4jE82L4x5SHcKf/v4CrCxEe1Deq4byVX61WrBBtt1vPcMK6WgAijfFX80Q8m+x0Omcj3+746jNAdQOVG76Qgg7CIKyrBeCVfcVEHQF+0hIK8rEwyqFcwiCsv+R847qxq2vXAAAAAElFTkSuQmCC"); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;')
+                  .mb-3.w-full.lg:w-1/2.px-2
+                    input.w-full.p-4.text-xs.text-gray-50.bg-gray-800.outline-none.rounded(type='text' placeholder='Last Name')
+                .mb-3.flex.p-4.bg-gray-800.rounded
+                  input.w-full.text-xs.text-gray-50.bg-gray-800.outline-none(type='email' placeholder='name@email.com')
+                  svg.h-6.w-6.ml-4.my-auto.text-gray-300(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                    path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207')
+                .mb-6.flex.p-4.bg-gray-800.rounded
+                  input.w-full.text-xs.text-gray-50.bg-gray-800.outline-none(type='password' placeholder='Enter your password' autocomplete='off' style='background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAAnVJREFUWAntVzuL4lAUPokBsVB0t9odK8VCLCal3Q4WbmUpCFv6DyymEmys9gf4B4RlS7GwEWQsBAsL195q2J3KWIiVrz0nJBcTk9yr3jCw7AG5j3PO9325j2OiAFq73X7Y7/ffsft0Op0+05wsUxTlD2K9aJr23Gw2f7txFYv8FxJ/dDtljlHICkU8ukWo9ORhk9ODEIe1yo7nUnH05JgJd3DBpcre8yD9Xly0Au9q/7aAfD4PjUYDqPWzUFegUChAIpEAav0sVAF4901eu/USEaoAL0L3nENANBqFbDYLqVTKHQe3+i6AXBOaPU4mk1Cv1yEej8PxeIR+vw/z+dx03+qzsYNatgLFYtEkp2BVVaFUKrG8W30MIKDDBATEhOpiAqbTKWw2G5OMtmA0GjHiW30MIKCjtFqtk+2ng5ZOp8EwDFiv1/a02Qb5HIGcAV7JNwwZW+8Hrw4BnFypbhRioAidbYFUdAEw/Gf8QO8H7ybA0viF1QEB0cIhmUwGqtUqxGIxM2cymcBwOLzIx1X4JF0A1YxyuWzWkgtGjwlpAiKRCFQqFdB13YPGf0qagFqtBrlczmSiOkJGFZVnKl4Hem+/26hYEfHhcIBerwe73U4IkyS+CEVygpbLJQwGA+h2u7BYLIC2RMSwFmjPeB+/4om8+8NkNpsxzqCXEBaEHZW+VFDEIyb8kLUd5wS8vnkIrc+lb7xg8p//d4jE82L4x5SHcKf/v4CrCxEe1Deq4byVX61WrBBtt1vPcMK6WgAijfFX80Q8m+x0Omcj3+746jNAdQOVG76Qgg7CIKyrBeCVfcVEHQF+0hIK8rEwyqFcwiCsv+R847qxq2vXAAAAAElFTkSuQmCC"); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;')
+                  button
+                    svg.h-6.w-6.ml-4.my-auto.text-gray-300(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
+                      path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 12a3 3 0 11-6 0 3 3 0 016 0z')
+                      path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z')
+                .text-center
+                  button.mb-2.w-full.py-4.bg-green-600.hover:bg-green-700.rounded.text-sm.font-bold.text-gray-50.transition.duration-200 Sign Up
+                  span.text-gray-400.text-xs
+                    span Already have an account?
+                    a.text-green-600.hover:underline(href='#') Sign In
+                  a.mt-8.mb-4.p-4.flex.justify-center.items-center.border.rounded.hover:bg-gray-800(href='#')
+                    img.mr-4(src='atis-assets/social/facebook-logo.png' alt)
+                    span.text-xs.text-gray-500.font-bold Sign Up with Facebook
+                  a.p-4.mb-4.flex.justify-center.items-center.border.rounded.hover:bg-gray-800(href='#')
+                    img.mr-4(src='atis-assets/social/google-logo.png' alt)
+                    span.text-xs.text-gray-500.font-bold Sign Up with Google
+                  a.p-4.flex.justify-center.items-center.border.rounded.hover:bg-gray-800(href='#')
+                    img.mr-4(src='atis-assets/social/twitter-logo.png' alt)
+                    span.text-xs.text-gray-500.font-bold Sign Up with Twitter
+            p.text-xs.text-center.text-gray-400
+              a.underline.hover:text-gray-500(href='#') Policy privacy
+              |  and 
+              a.underline.hover:text-gray-500(href='#') Terms of Use
+      section.bg-gray-900
+        .flex.w-full
+          .w-1/3.flex
+            .w-1/3.py-1.bg-green-400
+            .w-1/3.py-1.bg-green-500
+            .w-1/3.py-1.bg-green-600
+          .w-1/3.flex
+            .w-1/3.py-1.bg-green-400
+            .w-1/3.py-1.bg-green-500
+            .w-1/3.py-1.bg-green-600
+          .w-1/3.flex
+            .w-1/3.py-1.bg-green-400
+            .w-1/3.py-1.bg-green-500
+            .w-1/3.py-1.bg-green-600
+        .container.mx-auto.px-4
+          .pt-10.pb-12
+            .relative.lg:pb-8.mb-8.flex.flex-wrap.lg:border-b.lg:border-gray-800
+              p.w-full.lg:w-auto.text-gray-400.text-sm.text-center.lg:text-left.order-last.lg:order-first © 2021. All rights reserved.
+              .lg:absolute.lg:left-1/2.lg:transform.lg:-translate-x-1/2.mb-6.lg:mb-0.mx-auto
+                a.mr-6.text-sm.hover:text-gray-500(href='#') Terms of Service
+                a.text-sm.hover:text-gray-500(href='#') Police Privacy
+              .mb-12.lg:mb-0.lg:ml-auto.w-full.lg:w-auto.order-first.lg:order-last.text-center.lg:text-left
+                a.inline-block.text-white.text-xl.font-bold.leading-none(href='#')
+                  img.inline-block.h-12.lg:h-6(src='atis-assets/logo/atis/atis-mono-white.svg' alt width='auto')
+            .flex.justify-center
+              a.inline-block.w-10.mr-2.p-2.bg-gray-800.hover:bg-gray-700.rounded(href='#')
+                img.mx-auto(src='atis-assets/social/facebook.svg')
+              a.inline-block.w-10.mr-2.p-2.bg-gray-800.hover:bg-gray-700.rounded(href='#')
+                img.mx-auto(src='atis-assets/social/twitter.svg')
+              a.inline-block.w-10.p-2.bg-gray-800.hover:bg-gray-700.rounded(href='#')
+                img.mx-auto(src='atis-assets/social/instagram.svg')
