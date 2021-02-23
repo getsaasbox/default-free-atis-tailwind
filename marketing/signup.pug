@@ -1,15 +1,7 @@
 doctype html
 html(lang='en')
-  head
-    title Page title
-    meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width,initial-scale=1,shrink-to-fit=no')
-    meta(name='description' content)
-    meta(name='author' content)
-    link(href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap' rel='stylesheet')
-    link(rel='stylesheet' href='css/tailwind/tailwind.min.css')
-    link(rel='icon' type='image/png' sizes='16x16' href='favicon-tailwind.png')
-    script(src=asset('js/main.js'))
+  include common/head.pug
+  +head(#{title})
   body.antialiased.bg-body.text-body.font-body
     div
       section
@@ -122,36 +114,7 @@ html(lang='en')
                     span.text-xs.text-gray-500.font-bold Sign Up with Twitter
             p.text-xs.text-center.text-gray-400
               a.underline.hover_text-gray-500(href='#') Policy privacy
-              |  and 
+              | and 
               a.underline.hover_text-gray-500(href='#') Terms of Use
-      section.bg-gray-900
-        .flex.w-full
-          .w-1_3.flex
-            .w-1_3.py-1.bg-green-400
-            .w-1_3.py-1.bg-green-500
-            .w-1_3.py-1.bg-green-600
-          .w-1_3.flex
-            .w-1_3.py-1.bg-green-400
-            .w-1_3.py-1.bg-green-500
-            .w-1_3.py-1.bg-green-600
-          .w-1_3.flex
-            .w-1_3.py-1.bg-green-400
-            .w-1_3.py-1.bg-green-500
-            .w-1_3.py-1.bg-green-600
-        .container.mx-auto.px-4
-          .pt-10.pb-12
-            .relative.lg_pb-8.mb-8.flex.flex-wrap.lg_border-b.lg_border-gray-800
-              p.w-full.lg_w-auto.text-gray-400.text-sm.text-center.lg_text-left.order-last.lg_order-first © 2021. All rights reserved.
-              .lg_absolute.lg_left-1_2.lg_transform.lg_-translate-x-1_2.mb-6.lg_mb-0.mx-auto
-                a.mr-6.text-sm.hover_text-gray-500(href='#') Terms of Service
-                a.text-sm.hover_text-gray-500(href='#') Police Privacy
-              .mb-12.lg_mb-0.lg_ml-auto.w-full.lg_w-auto.order-first.lg_order-last.text-center.lg_text-left
-                a.inline-block.text-white.text-xl.font-bold.leading-none(href='#')
-                  img.inline-block.h-12.lg_h-6(src=asset('atis-assets/logo/atis/atis-mono-white.svg') alt width='auto')
-            .flex.justify-center
-              a.inline-block.w-10.mr-2.p-2.bg-gray-800.hover_bg-gray-700.rounded(href='#')
-                img.mx-auto(src=asset('atis-assets/social/facebook.svg'))
-              a.inline-block.w-10.mr-2.p-2.bg-gray-800.hover_bg-gray-700.rounded(href='#')
-                img.mx-auto(src=asset('atis-assets/social/twitter.svg'))
-              a.inline-block.w-10.p-2.bg-gray-800.hover_bg-gray-700.rounded(href='#')
-                img.mx-auto(src=asset('atis-assets/social/instagram.svg'))
+      include common/footer-simple.pug
+      +footer_simple()

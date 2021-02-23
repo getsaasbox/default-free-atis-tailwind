@@ -1,17 +1,11 @@
 doctype html
 html(lang='en')
-  head
-    title Page title
-    meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width,initial-scale=1,shrink-to-fit=no')
-    meta(name='description' content)
-    meta(name='author' content)
-    link(href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap' rel='stylesheet')
-    link(rel='stylesheet' href='css/tailwind/tailwind.min.css')
-    link(rel='icon' type='image/png' sizes='16x16' href='favicon-tailwind.png')
-    script(src=asset('js/main.js'))
+  include common/head.pug
+  +head(#{title})
   body.antialiased.bg-body.text-body.font-body
     div
+      include common/navbar.pug
+      +navbar()
       section
         .skew.skew-top.mr-for-radius
           svg.h-8.md_h-12.lg_h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
