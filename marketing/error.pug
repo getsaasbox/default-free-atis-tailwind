@@ -9,29 +9,29 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap' rel='stylesheet')
     link(rel='stylesheet' href='css/tailwind/tailwind.min.css')
     link(rel='icon' type='image/png' sizes='16x16' href='favicon-tailwind.png')
-    script(src='js/main.js')
+    script(src=asset('js/main.js'))
   body.antialiased.bg-body.text-body.font-body
     div
       section
         .skew.skew-top.mr-for-radius
-          svg.h-8.md:h-12.lg:h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
+          svg.h-8.md_h-12.lg_h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
             polygon(fill='currentColor' points='0 0 10 10 0 10')
         .skew.skew-top.ml-for-radius
-          svg.h-8.md:h-12.lg:h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
+          svg.h-8.md_h-12.lg_h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
             polygon(fill='currentColor' points='0 10 10 0 10 10')
         .py-20.bg-gray-900.radius-for-skewed
           .container.mx-auto.px-4
-            img.mx-auto(src='atis-assets/illustrations/pablo.png' alt)
+            img.mx-auto(src=asset('atis-assets/illustrations/pablo.png') alt)
             .text-center
               span.mb-6.text-4xl.text-green-600.font-bold Whoops!
               h3.mb-2.text-white.text-4xl.font-bold Something went wrong!
               p.mb-8.text-gray-500 Sorry, but we are unable to open this page
               div
-                a.w-full.lg:w-auto.mb-2.lg:mb-0.lg:mr-4.inline-block.py-2.px-6.rounded-l-xl.rounded-t-xl.font-bold.leading-loose.text-white.bg-green-600.hover:bg-green-700(href='#') Go back to Homepage
-                a.w-full.lg:w-auto.inline-block.py-2.px-6.rounded-l-xl.rounded-t-xl.font-bold.leading-loose.bg-white.hover:bg-gray-50.text-gray-900(href='#') Try Again
+                a.w-full.lg_w-auto.mb-2.lg_mb-0.lg_mr-4.inline-block.py-2.px-6.rounded-l-xl.rounded-t-xl.font-bold.leading-loose.text-white.bg-green-600.hover_bg-green-700(href='#') Go back to Homepage
+                a.w-full.lg_w-auto.inline-block.py-2.px-6.rounded-l-xl.rounded-t-xl.font-bold.leading-loose.bg-white.hover_bg-gray-50.text-gray-900(href='#') Try Again
         .skew.skew-bottom.mr-for-radius
-          svg.h-8.md:h-12.lg:h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
+          svg.h-8.md_h-12.lg_h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
             polygon(fill='currentColor' points='0 0 10 0 0 10')
         .skew.skew-bottom.ml-for-radius
-          svg.h-8.md:h-12.lg:h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
+          svg.h-8.md_h-12.lg_h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
             polygon(fill='currentColor' points='0 0 10 0 10 10')
