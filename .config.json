@@ -1,0 +1,5 @@
+{
+    "description": "Free Atis Dark template based on Tailwind UI.",
+    "assets": "assets",
+    "ignore": [".git", ".config.json", "tailwind.config.js", "README.md", "README.txt", "LICENSE", ".gitignore", ".DS_Store"]
+}
