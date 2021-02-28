@@ -1,0 +1,35 @@
+mixin sidebar()
+  aside.relative.bg-sidebar.h-screen.w-64.hidden.sm_block.shadow-xl
+    .p-6
+      a.text-white.text-3xl.font-semibold.uppercase.hover_text-gray-300(href='index.html') Admin
+      button.w-full.bg-white.cta-btn.font-semibold.py-2.mt-5.rounded-br-lg.rounded-bl-lg.rounded-tr-lg.shadow-lg.hover_shadow-xl.hover_bg-gray-300.flex.items-center.justify-center
+        i.fas.fa-plus.mr-3
+        |  New Report
+    nav.text-white.text-base.font-semibold.pt-3
+      a.flex.items-center.active-nav-link.text-white.py-4.pl-6.nav-item(href='index.html')
+        i.fas.fa-tachometer-alt.mr-3
+        | Dashboard
+
+      a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-4.pl-6.nav-item(href='blank.html')
+        i.fas.fa-sticky-note.mr-3
+        | Blank Page
+
+      a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-4.pl-6.nav-item(href='tables.html')
+        i.fas.fa-table.mr-3
+        | Tables
+
+      a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-4.pl-6.nav-item(href='forms.html')
+        i.fas.fa-align-left.mr-3
+        | Forms
+
+      a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-4.pl-6.nav-item(href='tabs.html')
+        i.fas.fa-tablet-alt.mr-3
+        | Tabbed Content
+
+      a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-4.pl-6.nav-item(href='calendar.html')
+        i.fas.fa-calendar.mr-3
+        | Calendar
+
+    a.absolute.w-full.upgrade-btn.bottom-0.active-nav-link.text-white.flex.items-center.justify-center.py-4(href='#')
+      i.fas.fa-arrow-circle-up.mr-3
+      | Upgrade to Pro!

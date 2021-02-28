@@ -1,0 +1,20 @@
+mixin head(title)
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    title=title
+    meta(name='author' content='David Grzyb')
+    meta(name='description' content)
+    //  Tailwind 
+    link(href='https://unpkg.com/tailwindcss/dist/tailwind.min.css' rel='stylesheet')
+    style.
+      @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+              .font-family-karla { font-family: karla; }
+              .bg-sidebar { background: #3d68ff; }
+              .cta-btn { color: #3d68ff; }
+              .upgrade-btn { background: #1947ee; }
+              .upgrade-btn_hover { background: #0038fd; }
+              .active-nav-link { background: #1947ee; }
+              .nav-item_hover { background: #1947ee; }
+              .account-link_hover { background: #3d68ff; }
+      

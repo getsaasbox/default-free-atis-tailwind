@@ -1,0 +1,351 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    title Tailwind Admin Template
+    meta(name='author' content='David Grzyb')
+    meta(name='description' content)
+    //  Tailwind 
+    link(href='https://unpkg.com/tailwindcss/dist/tailwind.min.css' rel='stylesheet')
+    style.
+      
+      @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+              .font-family-karla { font-family: karla; }
+              .bg-sidebar { background: #3d68ff; }
+              .cta-btn { color: #3d68ff; }
+              .upgrade-btn { background: #1947ee; }
+              .upgrade-btn_hover { background: #0038fd; }
+              .active-nav-link { background: #1947ee; }
+              .nav-item_hover { background: #1947ee; }
+              .account-link_hover { background: #3d68ff; }
+      
+  body.bg-gray-100.font-family-karla.flex
+    aside.relative.bg-sidebar.h-screen.w-64.hidden.sm_block.shadow-xl
+      .p-6
+        a.text-white.text-3xl.font-semibold.uppercase.hover_text-gray-300(href='index.html') Admin
+        button.w-full.bg-white.cta-btn.font-semibold.py-2.mt-5.rounded-br-lg.rounded-bl-lg.rounded-tr-lg.shadow-lg.hover_shadow-xl.hover_bg-gray-300.flex.items-center.justify-center
+          i.fas.fa-plus.mr-3
+          |  New Report
+
+      nav.text-white.text-base.font-semibold.pt-3
+        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-4.pl-6.nav-item(href='index.html')
+          i.fas.fa-tachometer-alt.mr-3
+          | 
+Dashboard
+
+        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-4.pl-6.nav-item(href='blank.html')
+          i.fas.fa-sticky-note.mr-3
+          | 
+Blank Page
+
+        a.flex.items-center.active-nav-link.text-white.py-4.pl-6.nav-item(href='tables.html')
+          i.fas.fa-table.mr-3
+          | 
+Tables
+
+        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-4.pl-6.nav-item(href='forms.html')
+          i.fas.fa-align-left.mr-3
+          | 
+Forms
+
+        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-4.pl-6.nav-item(href='tabs.html')
+          i.fas.fa-tablet-alt.mr-3
+          | 
+Tabbed Content
+
+        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-4.pl-6.nav-item(href='calendar.html')
+          i.fas.fa-calendar.mr-3
+          | 
+Calendar
+
+      a.absolute.w-full.upgrade-btn.bottom-0.active-nav-link.text-white.flex.items-center.justify-center.py-4(href='#')
+        i.fas.fa-arrow-circle-up.mr-3
+        | 
+Upgrade to Pro!
+
+    .relative.w-full.flex.flex-col.h-screen.overflow-y-hidden
+      //  Desktop Header 
+      header.w-full.items-center.bg-white.py-2.px-6.hidden.sm_flex
+        .w-1_2
+        .relative.w-1_2.flex.justify-end(x-data='{ isOpen: false }')
+          button.realtive.z-10.w-12.h-12.rounded-full.overflow-hidden.border-4.border-gray-400.hover_border-gray-300.focus_border-gray-300.focus_outline-none(@click='isOpen = !isOpen')
+            img(src='https://source.unsplash.com/uJ8LNVCBjFQ/400x400')
+          button.h-full.w-full.fixed.inset-0.cursor-default(x-show='isOpen' @click='isOpen = false')
+          .absolute.w-32.bg-white.rounded-lg.shadow-lg.py-2.mt-16(x-show='isOpen')
+            a.block.px-4.py-2.account-link.hover_text-white(href='#') Account
+            a.block.px-4.py-2.account-link.hover_text-white(href='#') Support
+            a.block.px-4.py-2.account-link.hover_text-white(href='#') Sign Out
+      //  Mobile Header & Nav 
+      header.w-full.bg-sidebar.py-5.px-6.sm_hidden(x-data='{ isOpen: false }')
+        .flex.items-center.justify-between
+          a.text-white.text-3xl.font-semibold.uppercase.hover_text-gray-300(href='index.html') Admin
+          button.text-white.text-3xl.focus_outline-none(@click='isOpen = !isOpen')
+            i.fas.fa-bars(x-show='!isOpen')
+            i.fas.fa-times(x-show='isOpen')
+        //  Dropdown Nav 
+        nav.flex.flex-col.pt-4(:class='isOpen ? \'flex\': \'hidden\'')
+          a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='index.html')
+            i.fas.fa-tachometer-alt.mr-3
+            | 
+Dashboard
+
+          a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='blank.html')
+            i.fas.fa-sticky-note.mr-3
+            | 
+Blank Page
+
+          a.flex.items-center.active-nav-link.text-white.py-2.pl-4.nav-item(href='tables.html')
+            i.fas.fa-table.mr-3
+            | 
+Tables
+
+          a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='forms.html')
+            i.fas.fa-align-left.mr-3
+            | 
+Forms
+
+          a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='tabs.html')
+            i.fas.fa-tablet-alt.mr-3
+            | 
+Tabbed Content
+
+          a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='calendar.html')
+            i.fas.fa-calendar.mr-3
+            | 
+Calendar
+
+          a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='#')
+            i.fas.fa-cogs.mr-3
+            | 
+Support
+
+          a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='#')
+            i.fas.fa-user.mr-3
+            | 
+My Account
+
+          a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='#')
+            i.fas.fa-sign-out-alt.mr-3
+            | 
+Sign Out
+
+          button.w-full.bg-white.cta-btn.font-semibold.py-2.mt-3.rounded-lg.shadow-lg.hover_shadow-xl.hover_bg-gray-300.flex.items-center.justify-center
+            i.fas.fa-arrow-circle-up.mr-3
+            |  Upgrade to Pro!
+
+        //
+           <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
+                          <i class="fas fa-plus mr-3"></i> New Report
+                      </button> 
+      .w-full.h-screen.overflow-x-hidden.border-t.flex.flex-col
+        main.w-full.flex-grow.p-6
+          h1.text-3xl.text-black.pb-6 Tables
+          .w-full.mt-6
+            p.text-xl.pb-3.flex.items-center
+              i.fas.fa-list.mr-3
+              |  Table Example
+
+            .bg-white.overflow-auto
+              table.min-w-full.bg-white
+                thead.bg-gray-800.text-white
+                  tr
+                    th.w-1_3.text-left.py-3.px-4.uppercase.font-semibold.text-sm Name
+                    th.w-1_3.text-left.py-3.px-4.uppercase.font-semibold.text-sm Last name
+                    th.text-left.py-3.px-4.uppercase.font-semibold.text-sm Phone
+                    th.text-left.py-3.px-4.uppercase.font-semibold.text-sm.
+                      Email
+                      
+                tbody.text-gray-700
+                  tr
+                    td.w-1_3.text-left.py-3.px-4 Lian
+                    td.w-1_3.text-left.py-3.px-4 Smith
+                    td.text-left.py-3.px-4
+                      a.hover_text-blue-500(href='tel:622322662') 622322662
+                    td.text-left.py-3.px-4
+                      a.hover_text-blue-500(href='mailto:jonsmith@mail.com') jonsmith@mail.com
+                  tr.bg-gray-200
+                    td.w-1_3.text-left.py-3.px-4 Emma
+                    td.w-1_3.text-left.py-3.px-4 Johnson
+                    td.text-left.py-3.px-4
+                      a.hover_text-blue-500(href='tel:622322662') 622322662
+                    td.text-left.py-3.px-4
+                      a.hover_text-blue-500(href='mailto:jonsmith@mail.com') jonsmith@mail.com
+                  tr
+                    td.w-1_3.text-left.py-3.px-4 Oliver
+                    td.w-1_3.text-left.py-3.px-4 Williams
+                    td.text-left.py-3.px-4
+                      a.hover_text-blue-500(href='tel:622322662') 622322662
+                    td.text-left.py-3.px-4
+                      a.hover_text-blue-500(href='mailto:jonsmith@mail.com') jonsmith@mail.com
+                  tr.bg-gray-200
+                    td.w-1_3.text-left.py-3.px-4 Isabella
+                    td.w-1_3.text-left.py-3.px-4 Brown
+                    td.text-left.py-3.px-4
+                      a.hover_text-blue-500(href='tel:622322662') 622322662
+                    td.text-left.py-3.px-4
+                      a.hover_text-blue-500(href='mailto:jonsmith@mail.com') jonsmith@mail.com
+            p.pt-3.text-gray-600
+              | 
+Source: 
+              a.underline(href='https://tailwindcomponents.com/component/striped-table') https://tailwindcomponents.com/component/striped-table
+          .w-full.mt-12
+            p.text-xl.pb-3.flex.items-center
+              i.fas.fa-list.mr-3
+              |  Table Example
+
+            .bg-white.overflow-auto
+              table.text-left.w-full.border-collapse
+                // Border collapse doesn't work on this site yet but it's available in newer tailwind versions 
+                thead
+                  tr
+                    th.py-4.px-6.bg-grey-lightest.font-bold.uppercase.text-sm.text-grey-dark.border-b.border-grey-light Name
+                    th.py-4.px-6.bg-grey-lightest.font-bold.uppercase.text-sm.text-grey-dark.border-b.border-grey-light Last Name
+                    th.py-4.px-6.bg-grey-lightest.font-bold.uppercase.text-sm.text-grey-dark.border-b.border-grey-light Phone
+                    th.py-4.px-6.bg-grey-lightest.font-bold.uppercase.text-sm.text-grey-dark.border-b.border-grey-light Email
+                tbody
+                  tr.hover_bg-grey-lighter
+                    td.py-4.px-6.border-b.border-grey-light Lian
+                    td.py-4.px-6.border-b.border-grey-light Smith
+                    td.py-4.px-6.border-b.border-grey-light 622322662
+                    td.py-4.px-6.border-b.border-grey-light jonsmith@mail.com
+                  tr.hover_bg-grey-lighter
+                    td.py-4.px-6.border-b.border-grey-light Lian
+                    td.py-4.px-6.border-b.border-grey-light Smith
+                    td.py-4.px-6.border-b.border-grey-light 622322662
+                    td.py-4.px-6.border-b.border-grey-light jonsmith@mail.com
+                  tr.hover_bg-grey-lighter
+                    td.py-4.px-6.border-b.border-grey-light Lian
+                    td.py-4.px-6.border-b.border-grey-light Smith
+                    td.py-4.px-6.border-b.border-grey-light 622322662
+                    td.py-4.px-6.border-b.border-grey-light jonsmith@mail.com
+                  tr.hover_bg-grey-lighter
+                    td.py-4.px-6.border-b.border-grey-light Lian
+                    td.py-4.px-6.border-b.border-grey-light Smith
+                    td.py-4.px-6.border-b.border-grey-light 622322662
+                    td.py-4.px-6.border-b.border-grey-light jonsmith@mail.com
+            p.pt-3.text-gray-600
+              | 
+Source: 
+              a.underline(href='https://tailwindcomponents.com/component/table') https://tailwindcomponents.com/component/table
+          .w-full.mt-12
+            p.text-xl.pb-3.flex.items-center
+              i.fas.fa-list.mr-3
+              |  Table Example
+
+            .bg-white.overflow-auto
+              table.min-w-full.leading-normal
+                thead
+                  tr
+                    th.px-5.py-3.border-b-2.border-gray-200.bg-gray-100.text-left.text-xs.font-semibold.text-gray-600.uppercase.tracking-wider.
+                      
+                      User
+                      
+                    th.px-5.py-3.border-b-2.border-gray-200.bg-gray-100.text-left.text-xs.font-semibold.text-gray-600.uppercase.tracking-wider.
+                      
+                      Rol
+                      
+                    th.px-5.py-3.border-b-2.border-gray-200.bg-gray-100.text-left.text-xs.font-semibold.text-gray-600.uppercase.tracking-wider.
+                      
+                      Created at
+                      
+                    th.px-5.py-3.border-b-2.border-gray-200.bg-gray-100.text-left.text-xs.font-semibold.text-gray-600.uppercase.tracking-wider.
+                      
+                      Status
+                      
+                tbody
+                  tr
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      .flex.items-center
+                        .flex-shrink-0.w-10.h-10
+                          img.w-full.h-full.rounded-full(src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80' alt)
+                        .ml-3
+                          p.text-gray-900.whitespace-no-wrap.
+                            
+                            Vera Carpenter
+                            
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      p.text-gray-900.whitespace-no-wrap Admin
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      p.text-gray-900.whitespace-no-wrap.
+                        
+                        Jan 21, 2020
+                        
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      span.relative.inline-block.px-3.py-1.font-semibold.text-green-900.leading-tight
+                        span.absolute.inset-0.bg-green-200.opacity-50.rounded-full(aria-hidden)
+                        span.relative Activo
+                  tr
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      .flex.items-center
+                        .flex-shrink-0.w-10.h-10
+                          img.w-full.h-full.rounded-full(src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80' alt)
+                        .ml-3
+                          p.text-gray-900.whitespace-no-wrap.
+                            
+                            Blake Bowman
+                            
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      p.text-gray-900.whitespace-no-wrap Editor
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      p.text-gray-900.whitespace-no-wrap.
+                        
+                        Jan 01, 2020
+                        
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      span.relative.inline-block.px-3.py-1.font-semibold.text-green-900.leading-tight
+                        span.absolute.inset-0.bg-green-200.opacity-50.rounded-full(aria-hidden)
+                        span.relative Activo
+                  tr
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      .flex.items-center
+                        .flex-shrink-0.w-10.h-10
+                          img.w-full.h-full.rounded-full(src='https://images.unsplash.com/photo-1540845511934-7721dd7adec3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80' alt)
+                        .ml-3
+                          p.text-gray-900.whitespace-no-wrap.
+                            
+                            Dana Moore
+                            
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      p.text-gray-900.whitespace-no-wrap Editor
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      p.text-gray-900.whitespace-no-wrap.
+                        
+                        Jan 10, 2020
+                        
+                    td.px-5.py-5.border-b.border-gray-200.bg-white.text-sm
+                      span.relative.inline-block.px-3.py-1.font-semibold.text-orange-900.leading-tight
+                        span.absolute.inset-0.bg-orange-200.opacity-50.rounded-full(aria-hidden)
+                        span.relative Suspended
+                  tr
+                    td.px-5.py-5.bg-white.text-sm
+                      .flex.items-center
+                        .flex-shrink-0.w-10.h-10
+                          img.w-full.h-full.rounded-full(src='https://images.unsplash.com/photo-1522609925277-66fea332c575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&h=160&w=160&q=80' alt)
+                        .ml-3
+                          p.text-gray-900.whitespace-no-wrap.
+                            
+                            Alonzo Cox
+                            
+                    td.px-5.py-5.bg-white.text-sm
+                      p.text-gray-900.whitespace-no-wrap Admin
+                    td.px-5.py-5.bg-white.text-sm
+                      p.text-gray-900.whitespace-no-wrap Jan 18, 2020
+                    td.px-5.py-5.bg-white.text-sm
+                      span.relative.inline-block.px-3.py-1.font-semibold.text-red-900.leading-tight
+                        span.absolute.inset-0.bg-red-200.opacity-50.rounded-full(aria-hidden)
+                        span.relative Inactive
+            p.pt-3.text-gray-600
+              | 
+Source: 
+              a.underline(href='https://tailwindcomponents.com/component/table-responsive-with-filters') https://tailwindcomponents.com/component/table-responsive-with-filters
+        footer.w-full.bg-white.text-right.p-4
+          | 
+Built by 
+          a.underline(target='_blank' href='https://davidgrzyb.com') David Grzyb
+          | .
+
+    //  AlpineJS 
+    script(src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js' defer)
+    //  Font Awesome 
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js' integrity='sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=' crossorigin='anonymous')
