@@ -2,7 +2,9 @@ module.exports = {
     separator: '_',
     purge: [
         './atis-tailwind-default-free/marketing/common/*.pug',
-        './atis-tailwind-default-free/marketing/*.pug'
+        './atis-tailwind-default-free/marketing/*.pug',
+        './atis-tailwind-default-free/app/*.pug',
+        './atis-tailwind-default-free/app/common/*.pug'
     ],
     darkMode: false, // or 'media' or 'class'
     theme: {
