@@ -5,10 +5,11 @@ const Color = require('color')
 module.exports = {
   separator: '_',
   purge: [
-    'assets/app/*.pug',
-    'assets/app/common/*.pug'
+    'app/*.pug',
+    'app/common/*.pug'
   ],
   theme: {
+    themeVariants: ['dark'],
     customForms: (theme) => ({
       default: {
         'input, textarea': {
@@ -223,7 +224,35 @@ module.exports = {
       },
     },
   },
+  variants: {
+    backgroundColor: [
+      'hover',
+      'focus',
+      'active',
+      'odd',
+      'dark',
+      'dark:hover',
+      'dark:focus',
+      'dark:active',
+      'dark:odd',
+    ],
+    display: ['responsive', 'dark'],
+    textColor: [
+      'focus-within',
+      'hover',
+      'active',
+      'dark',
+      'dark:focus-within',
+      'dark:hover',
+      'dark:active',
+    ],
+    placeholderColor: ['focus', 'dark', 'dark:focus'],
+    borderColor: ['focus', 'hover', 'dark', 'dark:focus', 'dark:hover'],
+    divideColor: ['dark'],
+    boxShadow: ['focus', 'dark:focus'],
+  },
   plugins: [
+    require('tailwindcss-multi-theme'),
     require('@tailwindcss/custom-forms'),
     plugin(({ addUtilities, e, theme, variants }) => {
       const newUtilities = {}
