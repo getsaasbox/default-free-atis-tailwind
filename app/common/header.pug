@@ -1,66 +1,33 @@
 mixin header()
-  .w-full.flex.flex-col.h-screen.overflow-y-hidden
-    //  Desktop Header 
-    header.w-full.items-center.bg-white.py-2.px-6.hidden.sm_flex
-      .w-1_2
-      .relative.w-1_2.flex.justify-end(x-data='{ isOpen: false }')
-        button.realtive.z-10.w-12.h-12.rounded-full.overflow-hidden.border-4.border-gray-400.hover_border-gray-300.focus_border-gray-300.focus_outline-none(@click='isOpen = !isOpen')
-          img(src='https://source.unsplash.com/uJ8LNVCBjFQ/400x400')
-        button.h-full.w-full.fixed.inset-0.cursor-default(x-show='isOpen' @click='isOpen = false')
-        .absolute.w-32.bg-white.rounded-lg.shadow-lg.py-2.mt-16(x-show='isOpen')
-          a.block.px-4.py-2.account-link.hover_text-white(href='#') Account
-          a.block.px-4.py-2.account-link.hover_text-white(href='#') Support
-          a.block.px-4.py-2.account-link.hover_text-white(href='#') Sign Out
-    //  Mobile Header & Nav 
-    header.w-full.bg-sidebar.py-5.px-6.sm_hidden(x-data='{ isOpen: false }')
-      .flex.items-center.justify-between
-        a.text-white.text-3xl.font-semibold.uppercase.hover_text-gray-300(href='index.html') Admin
-        button.text-white.text-3xl.focus_outline-none(@click='isOpen = !isOpen')
-          i.fas.fa-bars(x-show='!isOpen')
-          i.fas.fa-times(x-show='isOpen')
-      //  Dropdown Nav 
-      nav.flex.flex-col.pt-4(:class='isOpen ? \'flex\': \'hidden\'')
-        a.flex.items-center.active-nav-link.text-white.py-2.pl-4.nav-item(href='index.html')
-          i.fas.fa-tachometer-alt.mr-3
-          | Dashboard
-
-        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='blank.html')
-          i.fas.fa-sticky-note.mr-3
-          | Blank Page
-
-        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='tables.html')
-          i.fas.fa-table.mr-3
-          | Tables
-
-        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='forms.html')
-          i.fas.fa-align-left.mr-3
-          | Forms
-
-        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='tabs.html')
-          i.fas.fa-tablet-alt.mr-3
-          | Tabbed Content
-
-        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='calendar.html')
-          i.fas.fa-calendar.mr-3
-          | Calendar
-
-        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='#')
-          i.fas.fa-cogs.mr-3
-          | Support
-
-        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='#')
-          i.fas.fa-user.mr-3
-          | My Account
-
-        a.flex.items-center.text-white.opacity-75.hover_opacity-100.py-2.pl-4.nav-item(href='#')
-          i.fas.fa-sign-out-alt.mr-3
-          | Sign Out
-
-        button.w-full.bg-white.cta-btn.font-semibold.py-2.mt-3.rounded-lg.shadow-lg.hover_shadow-xl.hover_bg-gray-300.flex.items-center.justify-center
-          i.fas.fa-arrow-circle-up.mr-3
-          |  Upgrade to Pro!
-
-      //
-         <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                        <i class="fas fa-plus mr-3"></i> New Report
-                    </button> 
+  header.z-10.py-4.bg-white.shadow-md.dark_bg-gray-800
+    .container.flex.items-center.justify-between.h-full.px-6.mx-auto.text-purple-600.dark_text-purple-300
+      //  Mobile hamburger 
+      button.p-1.mr-5.-ml-1.rounded-md.md_hidden.focus_outline-none.focus_shadow-outline-purple(@click='toggleSideMenu' aria-label='Menu')
+        svg.w-6.h-6(aria-hidden='true' fill='currentColor' viewBox='0 0 20 20')
+          path(fill-rule='evenodd' d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z' clip-rule='evenodd')
+      //  Search input 
+      .flex.justify-center.flex-1.lg_mr-32
+        .relative.w-full.max-w-xl.mr-6.focus-within_text-purple-500
+          .absolute.inset-y-0.flex.items-center.pl-2
+            svg.w-4.h-4(aria-hidden='true' fill='currentColor' viewBox='0 0 20 20')
+              path(fill-rule='evenodd' d='M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z' clip-rule='evenodd')
+          input.w-full.pl-8.pr-2.text-sm.text-gray-700.placeholder-gray-600.bg-gray-100.border-0.rounded-md.dark_placeholder-gray-500.dark_focus_shadow-outline-gray.dark_focus_placeholder-gray-600.dark_bg-gray-700.dark_text-gray-200.focus_placeholder-gray-500.focus_bg-white.focus_border-purple-300.focus_outline-none.focus_shadow-outline-purple.form-input(type='text' placeholder='Search for projects' aria-label='Search')
+      ul.flex.items-center.flex-shrink-0.space-x-6
+        //  Theme toggler 
+        li.flex
+          button.rounded-md.focus_outline-none.focus_shadow-outline-purple(@click='toggleTheme' aria-label='Toggle color mode')
+            template(x-if='!dark')
+            template(x-if='dark')
+        //  Notifications menu 
+        li.relative
+          button.relative.align-middle.rounded-md.focus_outline-none.focus_shadow-outline-purple(@click='toggleNotificationsMenu' @keydown.escape='closeNotificationsMenu' aria-label='Notifications' aria-haspopup='true')
+            svg.w-5.h-5(aria-hidden='true' fill='currentColor' viewBox='0 0 20 20')
+              path(d='M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z')
+            //  Notification badge 
+            span.absolute.top-0.right-0.inline-block.w-3.h-3.transform.translate-x-1.-translate-y-1.bg-red-600.border-2.border-white.rounded-full.dark_border-gray-800(aria-hidden='true')
+          template(x-if='isNotificationsMenuOpen')
+        //  Profile menu 
+        li.relative
+          button.align-middle.rounded-full.focus_shadow-outline-purple.focus_outline-none(@click='toggleProfileMenu' @keydown.escape='closeProfileMenu' aria-label='Account' aria-haspopup='true')
+            img.object-cover.w-8.h-8.rounded-full(src='https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82' alt aria-hidden='true')
+          template(x-if='isProfileMenuOpen')

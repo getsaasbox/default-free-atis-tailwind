@@ -1,22 +1,13 @@
-mixin head(title)
+mixin head()
   head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
-    title=title
-    meta(name='author' content='David Grzyb')
-    meta(name='description' content)
-    //  Tailwind 
-    //link(href='https://unpkg.com/tailwindcss/dist/tailwind.min.css' rel='stylesheet')
-    link(rel="stylesheet" href=asset("css/tailwind/tailwind-theme.min.css"))
-
-    style.
-      @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-              .font-family-karla { font-family: karla; }
-              .bg-sidebar { background: #3d68ff; }
-              .cta-btn { color: #3d68ff; }
-              .upgrade-btn { background: #1947ee; }
-              .upgrade-btn_hover { background: #0038fd; }
-              .active-nav-link { background: #1947ee; }
-              .nav-item_hover { background: #1947ee; }
-              .account-link_hover { background: #3d68ff; }
-      
+    title Windmill Dashboard
+    link(href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href=asset('app/css/tailwind.output.css'))
+    script(src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js' defer)
+    script(src=asset('app/js/init-alpine.js'))
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js' defer)
+    script(src=asset('app/js/charts-lines.js') defer)
+    script(src=asset('app/js/charts-pie.js') defer)
