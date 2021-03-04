@@ -4,6 +4,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
   +head(title)
   body
     .flex.h-screen.bg-gray-50.dark_bg-gray-900(:class='{ \'overflow-hidden\': isSideMenuOpen }')
+
       include common/sidebar.pug
       +sidebar()
       .flex.flex-col.flex-1.w-full
@@ -11,10 +12,8 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
         +header()
         main.h-full.overflow-y-auto
           .container.px-6.mx-auto.grid
-            h2.my-6.text-2xl.font-semibold.text-gray-700.dark_text-gray-200.
-              
+            h2.my-6.text-2xl.font-semibold.text-gray-700.text-gray-200.
               Dashboard
-              
             //  CTA 
             a.flex.items-center.justify-between.p-4.mb-8.text-sm.font-semibold.text-purple-100.bg-purple-600.rounded-lg.shadow-md.focus_outline-none.focus_shadow-outline-purple(href='https://github.com/estevanmaito/windmill-dashboard')
               .flex.items-center
@@ -25,58 +24,58 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
             //  Cards 
             .grid.gap-6.mb-8.md_grid-cols-2.xl_grid-cols-4
               //  Card 
-              .flex.items-center.p-4.bg-white.rounded-lg.shadow-xs.dark_bg-gray-800
-                .p-3.mr-4.text-orange-500.bg-orange-100.rounded-full.dark_text-orange-100.dark_bg-orange-500
+              .flex.items-center.p-4.bg-white.rounded-lg.shadow-xs.bg-gray-800
+                .p-3.mr-4.text-orange-500.bg-orange-100.rounded-full.text-orange-100.bg-orange-500
                   svg.w-5.h-5(fill='currentColor' viewBox='0 0 20 20')
                     path(d='M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z')
                 div
-                  p.mb-2.text-sm.font-medium.text-gray-600.dark_text-gray-400.
+                  p.mb-2.text-sm.font-medium.text-gray-600.text-gray-400.
                     
                     Total clients
                     
-                  p.text-lg.font-semibold.text-gray-700.dark_text-gray-200.
+                  p.text-lg.font-semibold.text-gray-700.text-gray-200.
                     
                     6389
                     
               //  Card 
-              .flex.items-center.p-4.bg-white.rounded-lg.shadow-xs.dark_bg-gray-800
-                .p-3.mr-4.text-green-500.bg-green-100.rounded-full.dark_text-green-100.dark_bg-green-500
+              .flex.items-center.p-4.bg-white.rounded-lg.shadow-xs.bg-gray-800
+                .p-3.mr-4.text-green-500.bg-green-100.rounded-full.text-green-100.bg-green-500
                   svg.w-5.h-5(fill='currentColor' viewBox='0 0 20 20')
                     path(fill-rule='evenodd' d='M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z' clip-rule='evenodd')
                 div
-                  p.mb-2.text-sm.font-medium.text-gray-600.dark_text-gray-400.
+                  p.mb-2.text-sm.font-medium.text-gray-600.text-gray-400.
                     
                     Account balance
                     
-                  p.text-lg.font-semibold.text-gray-700.dark_text-gray-200.
+                  p.text-lg.font-semibold.text-gray-700.text-gray-200.
                     
                     $ 46,760.89
                     
               //  Card 
-              .flex.items-center.p-4.bg-white.rounded-lg.shadow-xs.dark_bg-gray-800
-                .p-3.mr-4.text-blue-500.bg-blue-100.rounded-full.dark_text-blue-100.dark_bg-blue-500
+              .flex.items-center.p-4.bg-white.rounded-lg.shadow-xs.bg-gray-800
+                .p-3.mr-4.text-blue-500.bg-blue-100.rounded-full.text-blue-100.bg-blue-500
                   svg.w-5.h-5(fill='currentColor' viewBox='0 0 20 20')
                     path(d='M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z')
                 div
-                  p.mb-2.text-sm.font-medium.text-gray-600.dark_text-gray-400.
+                  p.mb-2.text-sm.font-medium.text-gray-600.text-gray-400.
                     
                     New sales
                     
-                  p.text-lg.font-semibold.text-gray-700.dark_text-gray-200.
+                  p.text-lg.font-semibold.text-gray-700.text-gray-200.
                     
                     376
                     
               //  Card 
-              .flex.items-center.p-4.bg-white.rounded-lg.shadow-xs.dark_bg-gray-800
-                .p-3.mr-4.text-teal-500.bg-teal-100.rounded-full.dark_text-teal-100.dark_bg-teal-500
+              .flex.items-center.p-4.bg-white.rounded-lg.shadow-xs.bg-gray-800
+                .p-3.mr-4.text-teal-500.bg-teal-100.rounded-full.text-teal-100.bg-teal-500
                   svg.w-5.h-5(fill='currentColor' viewBox='0 0 20 20')
                     path(fill-rule='evenodd' d='M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z' clip-rule='evenodd')
                 div
-                  p.mb-2.text-sm.font-medium.text-gray-600.dark_text-gray-400.
+                  p.mb-2.text-sm.font-medium.text-gray-600.text-gray-400.
                     
                     Pending contacts
                     
-                  p.text-lg.font-semibold.text-gray-700.dark_text-gray-200.
+                  p.text-lg.font-semibold.text-gray-700.text-gray-200.
                     
                     35
                     
@@ -85,13 +84,13 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
               .w-full.overflow-x-auto
                 table.w-full.whitespace-no-wrap
                   thead
-                    tr.text-xs.font-semibold.tracking-wide.text-left.text-gray-500.uppercase.border-b.dark_border-gray-700.bg-gray-50.dark_text-gray-400.dark_bg-gray-800
+                    tr.text-xs.font-semibold.tracking-wide.text-left.text-gray-500.uppercase.border-b.border-gray-700.bg-gray-50.text-gray-400.bg-gray-800
                       th.px-4.py-3 Client
                       th.px-4.py-3 Amount
                       th.px-4.py-3 Status
                       th.px-4.py-3 Date
-                  tbody.bg-white.divide-y.dark_divide-gray-700.dark_bg-gray-800
-                    tr.text-gray-700.dark_text-gray-400
+                  tbody.bg-white.divide-y.divide-gray-700.bg-gray-800
+                    tr.text-gray-700.text-gray-400
                       td.px-4.py-3
                         .flex.items-center.text-sm
                           //  Avatar with inset shadow 
@@ -100,7 +99,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                             .absolute.inset-0.rounded-full.shadow-inner(aria-hidden='true')
                           div
                             p.font-semibold Hans Burger
-                            p.text-xs.text-gray-600.dark_text-gray-400.
+                            p.text-xs.text-gray-600.text-gray-400.
                               
                               10x Developer
                               
@@ -109,7 +108,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         $ 863.45
                         
                       td.px-4.py-3.text-xs
-                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.dark_bg-green-700.dark_text-green-100.
+                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.bg-green-700.text-green-100.
                           
                           Approved
                           
@@ -117,7 +116,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         
                         6/10/2020
                         
-                    tr.text-gray-700.dark_text-gray-400
+                    tr.text-gray-700.text-gray-400
                       td.px-4.py-3
                         .flex.items-center.text-sm
                           //  Avatar with inset shadow 
@@ -126,7 +125,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                             .absolute.inset-0.rounded-full.shadow-inner(aria-hidden='true')
                           div
                             p.font-semibold Jolina Angelie
-                            p.text-xs.text-gray-600.dark_text-gray-400.
+                            p.text-xs.text-gray-600.text-gray-400.
                               
                               Unemployed
                               
@@ -135,7 +134,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         $ 369.95
                         
                       td.px-4.py-3.text-xs
-                        span.px-2.py-1.font-semibold.leading-tight.text-orange-700.bg-orange-100.rounded-full.dark_text-white.dark_bg-orange-600.
+                        span.px-2.py-1.font-semibold.leading-tight.text-orange-700.bg-orange-100.rounded-full.text-white.bg-orange-600.
                           
                           Pending
                           
@@ -143,7 +142,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         
                         6/10/2020
                         
-                    tr.text-gray-700.dark_text-gray-400
+                    tr.text-gray-700.text-gray-400
                       td.px-4.py-3
                         .flex.items-center.text-sm
                           //  Avatar with inset shadow 
@@ -152,7 +151,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                             .absolute.inset-0.rounded-full.shadow-inner(aria-hidden='true')
                           div
                             p.font-semibold Sarah Curry
-                            p.text-xs.text-gray-600.dark_text-gray-400.
+                            p.text-xs.text-gray-600.text-gray-400.
                               
                               Designer
                               
@@ -161,7 +160,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         $ 86.00
                         
                       td.px-4.py-3.text-xs
-                        span.px-2.py-1.font-semibold.leading-tight.text-red-700.bg-red-100.rounded-full.dark_text-red-100.dark_bg-red-700.
+                        span.px-2.py-1.font-semibold.leading-tight.text-red-700.bg-red-100.rounded-full.text-red-100.bg-red-700.
                           
                           Denied
                           
@@ -169,7 +168,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         
                         6/10/2020
                         
-                    tr.text-gray-700.dark_text-gray-400
+                    tr.text-gray-700.text-gray-400
                       td.px-4.py-3
                         .flex.items-center.text-sm
                           //  Avatar with inset shadow 
@@ -178,7 +177,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                             .absolute.inset-0.rounded-full.shadow-inner(aria-hidden='true')
                           div
                             p.font-semibold Rulia Joberts
-                            p.text-xs.text-gray-600.dark_text-gray-400.
+                            p.text-xs.text-gray-600.text-gray-400.
                               
                               Actress
                               
@@ -187,7 +186,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         $ 1276.45
                         
                       td.px-4.py-3.text-xs
-                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.dark_bg-green-700.dark_text-green-100.
+                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.bg-green-700.text-green-100.
                           
                           Approved
                           
@@ -195,7 +194,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         
                         6/10/2020
                         
-                    tr.text-gray-700.dark_text-gray-400
+                    tr.text-gray-700.text-gray-400
                       td.px-4.py-3
                         .flex.items-center.text-sm
                           //  Avatar with inset shadow 
@@ -204,7 +203,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                             .absolute.inset-0.rounded-full.shadow-inner(aria-hidden='true')
                           div
                             p.font-semibold Wenzel Dashington
-                            p.text-xs.text-gray-600.dark_text-gray-400.
+                            p.text-xs.text-gray-600.text-gray-400.
                               
                               Actor
                               
@@ -213,7 +212,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         $ 863.45
                         
                       td.px-4.py-3.text-xs
-                        span.px-2.py-1.font-semibold.leading-tight.text-gray-700.bg-gray-100.rounded-full.dark_text-gray-100.dark_bg-gray-700.
+                        span.px-2.py-1.font-semibold.leading-tight.text-gray-700.bg-gray-100.rounded-full.text-gray-100.bg-gray-700.
                           
                           Expired
                           
@@ -221,7 +220,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         
                         6/10/2020
                         
-                    tr.text-gray-700.dark_text-gray-400
+                    tr.text-gray-700.text-gray-400
                       td.px-4.py-3
                         .flex.items-center.text-sm
                           //  Avatar with inset shadow 
@@ -230,7 +229,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                             .absolute.inset-0.rounded-full.shadow-inner(aria-hidden='true')
                           div
                             p.font-semibold Dave Li
-                            p.text-xs.text-gray-600.dark_text-gray-400.
+                            p.text-xs.text-gray-600.text-gray-400.
                               
                               Influencer
                               
@@ -239,7 +238,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         $ 863.45
                         
                       td.px-4.py-3.text-xs
-                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.dark_bg-green-700.dark_text-green-100.
+                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.bg-green-700.text-green-100.
                           
                           Approved
                           
@@ -247,7 +246,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         
                         6/10/2020
                         
-                    tr.text-gray-700.dark_text-gray-400
+                    tr.text-gray-700.text-gray-400
                       td.px-4.py-3
                         .flex.items-center.text-sm
                           //  Avatar with inset shadow 
@@ -256,7 +255,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                             .absolute.inset-0.rounded-full.shadow-inner(aria-hidden='true')
                           div
                             p.font-semibold Maria Ramovic
-                            p.text-xs.text-gray-600.dark_text-gray-400.
+                            p.text-xs.text-gray-600.text-gray-400.
                               
                               Runner
                               
@@ -265,7 +264,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         $ 863.45
                         
                       td.px-4.py-3.text-xs
-                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.dark_bg-green-700.dark_text-green-100.
+                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.bg-green-700.text-green-100.
                           
                           Approved
                           
@@ -273,7 +272,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         
                         6/10/2020
                         
-                    tr.text-gray-700.dark_text-gray-400
+                    tr.text-gray-700.text-gray-400
                       td.px-4.py-3
                         .flex.items-center.text-sm
                           //  Avatar with inset shadow 
@@ -282,7 +281,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                             .absolute.inset-0.rounded-full.shadow-inner(aria-hidden='true')
                           div
                             p.font-semibold Hitney Wouston
-                            p.text-xs.text-gray-600.dark_text-gray-400.
+                            p.text-xs.text-gray-600.text-gray-400.
                               
                               Singer
                               
@@ -291,7 +290,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         $ 863.45
                         
                       td.px-4.py-3.text-xs
-                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.dark_bg-green-700.dark_text-green-100.
+                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.bg-green-700.text-green-100.
                           
                           Approved
                           
@@ -299,7 +298,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         
                         6/10/2020
                         
-                    tr.text-gray-700.dark_text-gray-400
+                    tr.text-gray-700.text-gray-400
                       td.px-4.py-3
                         .flex.items-center.text-sm
                           //  Avatar with inset shadow 
@@ -308,7 +307,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                             .absolute.inset-0.rounded-full.shadow-inner(aria-hidden='true')
                           div
                             p.font-semibold Hans Burger
-                            p.text-xs.text-gray-600.dark_text-gray-400.
+                            p.text-xs.text-gray-600.text-gray-400.
                               
                               10x Developer
                               
@@ -317,7 +316,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         $ 863.45
                         
                       td.px-4.py-3.text-xs
-                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.dark_bg-green-700.dark_text-green-100.
+                        span.px-2.py-1.font-semibold.leading-tight.text-green-700.bg-green-100.rounded-full.bg-green-700.text-green-100.
                           
                           Approved
                           
@@ -325,7 +324,7 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                         
                         6/10/2020
                         
-              .grid.px-4.py-3.text-xs.font-semibold.tracking-wide.text-gray-500.uppercase.border-t.dark_border-gray-700.bg-gray-50.sm_grid-cols-9.dark_text-gray-400.dark_bg-gray-800
+              .grid.px-4.py-3.text-xs.font-semibold.tracking-wide.text-gray-500.uppercase.border-t.border-gray-700.bg-gray-50.sm_grid-cols-9.text-gray-400.bg-gray-800
                 span.flex.items-center.col-span-3.
                   
                   Showing 21-30 of 100
@@ -376,18 +375,18 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                           svg.w-4.h-4.fill-current(aria-hidden='true' viewBox='0 0 20 20')
                             path(d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd' fill-rule='evenodd')
             //  Charts 
-            h2.my-6.text-2xl.font-semibold.text-gray-700.dark_text-gray-200.
+            h2.my-6.text-2xl.font-semibold.text-gray-700.text-gray-200.
               
               Charts
               
             .grid.gap-6.mb-8.md_grid-cols-2
-              .min-w-0.p-4.bg-white.rounded-lg.shadow-xs.dark_bg-gray-800
-                h4.mb-4.font-semibold.text-gray-800.dark_text-gray-300.
+              .min-w-0.p-4.bg-white.rounded-lg.shadow-xs.bg-gray-800
+                h4.mb-4.font-semibold.text-gray-800.text-gray-300.
                   
                   Revenue
                   
                 canvas#pie
-                .flex.justify-center.mt-4.space-x-3.text-sm.text-gray-600.dark_text-gray-400
+                .flex.justify-center.mt-4.space-x-3.text-sm.text-gray-600.text-gray-400
                   //  Chart legend 
                   .flex.items-center
                     span.inline-block.w-3.h-3.mr-1.bg-blue-500.rounded-full
@@ -398,13 +397,13 @@ html(:class='{ \'theme-dark\': dark }' x-data='data()' lang='en')
                   .flex.items-center
                     span.inline-block.w-3.h-3.mr-1.bg-purple-600.rounded-full
                     span Bags
-              .min-w-0.p-4.bg-white.rounded-lg.shadow-xs.dark_bg-gray-800
-                h4.mb-4.font-semibold.text-gray-800.dark_text-gray-300.
+              .min-w-0.p-4.bg-white.rounded-lg.shadow-xs.bg-gray-800
+                h4.mb-4.font-semibold.text-gray-800.text-gray-300.
                   
                   Traffic
                   
                 canvas#line
-                .flex.justify-center.mt-4.space-x-3.text-sm.text-gray-600.dark_text-gray-400
+                .flex.justify-center.mt-4.space-x-3.text-sm.text-gray-600.text-gray-400
                   //  Chart legend 
                   .flex.items-center
                     span.inline-block.w-3.h-3.mr-1.bg-teal-600.rounded-full
