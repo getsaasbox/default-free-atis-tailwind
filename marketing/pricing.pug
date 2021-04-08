@@ -38,7 +38,7 @@ html(lang='en')
                           else
                             span.text-6xl.font-bold $#{plan.price_per_period}
                             - let period = plan.billing_period.slice(0,-2)
-                            span.text-gray-50.text-xs /#{period}
+                            span.text-xs /#{period}
                           p.mt-3.mb-6.text-gray-500.leading-loose #{plan.description}
                           ul.mb-6.text-gray-500
                             - for (let i = 0; i < 10; i++)
