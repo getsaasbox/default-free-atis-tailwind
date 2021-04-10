@@ -72,9 +72,9 @@ mixin sidebar()
               li.px-2.py-1.transition-colors.duration-150.hover_text-gray-800.dark_hover_text-gray-200
                 a.w-full(href='pages/blank.html') Blank
       .px-6.my-6
-        button.flex.items-center.justify-between.w-full.px-4.py-2.text-sm.font-medium.leading-5.text-white.transition-colors.duration-150.bg-purple-600.border.border-transparent.rounded-lg.active_bg-purple-600.hover_bg-purple-700.focus_outline-none.focus_shadow-outline-purple
-          | Create account
-          span.ml-2(aria-hidden='true') +
+        a(href="/user/profile").flex.items-center.justify-between.w-full.px-4.py-2.text-sm.font-medium.leading-5.text-white.transition-colors.duration-150.bg-purple-600.border.border-transparent.rounded-lg.active_bg-purple-600.hover_bg-purple-700.focus_outline-none.focus_shadow-outline-purple
+          | Account Settings
+          //-span.ml-2(aria-hidden='true')
   //  Mobile sidebar 
   //  Backdrop 
   .fixed.inset-0.z-10.flex.items-end.bg-black.bg-opacity-50.sm_items-center.sm_justify-center(x-show='isSideMenuOpen' x-transition:enter='transition ease-in-out duration-150' x-transition:enter-start='opacity-0' x-transition:enter-end='opacity-100' x-transition:leave='transition ease-in-out duration-150' x-transition:leave-start='opacity-100' x-transition:leave-end='opacity-0')
@@ -144,6 +144,6 @@ mixin sidebar()
               li.px-2.py-1.transition-colors.duration-150.hover_text-gray-800.dark_hover_text-gray-200
                 a.w-full(href='pages/blank.html') Blank
       .px-6.my-6
-        button.flex.items-center.justify-between.px-4.py-2.text-sm.font-medium.leading-5.text-white.transition-colors.duration-150.bg-purple-600.border.border-transparent.rounded-lg.active_bg-purple-600.hover_bg-purple-700.focus_outline-none.focus_shadow-outline-purple
-          | Create account
-          span.ml-2(aria-hidden='true') +
+        a(href="/user/profile").flex.items-center.justify-between.px-4.py-2.text-sm.font-medium.leading-5.text-white.transition-colors.duration-150.bg-purple-600.border.border-transparent.rounded-lg.active_bg-purple-600.hover_bg-purple-700.focus_outline-none.focus_shadow-outline-purple
+          | Account Settings
+          //-span.ml-2(aria-hidden='true') +
