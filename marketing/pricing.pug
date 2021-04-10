@@ -20,7 +20,7 @@ html(lang='en')
                 | [Strong Value Proposition]
               h2.mb-2.text-4xl.lg_text-5xl.font-bold.font-heading.text-white Pricing Plans
               p.mb-6.text-gray-500 Try Risk Free for 30 Days with a money back guarantee. Upgrade when you need.
-              .inline-block.py-1.px-1.bg-gray-800.rounded-lg
+              div(id="pricing-tabs").inline-block.py-1.px-1.bg-gray-800.rounded-lg
                 a(href="/pricing").mr-1.text-sm.py-2.px-4.text-gray-500.hover_text-gray-900.font-bold Monthly
                 a(href="/pricing-yearly").text-sm.py-2.px-4.text-white.bg-green-600.rounded-lg.shadow-mf.font-bold Yearly
             form(action="/pick-plan", method="POST")

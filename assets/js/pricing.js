@@ -12,8 +12,8 @@
 let paths = window.location.pathname;
 
 // Find link with matching path. Search only links under sidebar and sidebar mobile. Otherwise we color other links.
-let monthly = $('a[href="/pricing"]');
-let yearly = $('a[href="/pricing-yearly"]');
+let monthly = $("#pricing-tabs").find('a[href="/pricing"]');
+let yearly = $("#pricing-tabs").find('a[href="/pricing-yearly"]');
 
 if (paths == "/pricing") {
 	monthly.removeClass("text-gray-500 hover_text-gray-900 font-bold ")
@@ -25,5 +25,4 @@ if (paths == "/pricing") {
 	yearly.addClass("text-white bg-green-600 rounded-lg shadow-mf font-bold");
 	monthly.removeClass("text-white bg-green-600 rounded-lg shadow-mf font-bold");
 	monthly.addClass("text-gray-500 hover_text-gray-900 font-bold ")
-	
 }

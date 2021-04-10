@@ -10,7 +10,7 @@ mixin footer()
       .container.mx-auto.px-4
         .flex.flex-wrap
           .w-full.lg_w-1_3.mb-16.lg_mb-0
-            a.inline-block.mb-3.text-white.text-3xl.font-bold.leading-none(href='#')
+            a.inline-block.mb-3.text-white.text-3xl.font-bold.leading-none(href='/')
               img.mb-3.h-12(src=asset('atis-assets/logo/atis/atis-mono-white.svg') alt width='auto')
             p.mb-4.max-w-sm.text-gray-400.leading-loose Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt felis eu est.
             div
@@ -58,10 +58,15 @@ mixin footer()
                   a.text-gray-400.hover_text-gray-300(href='#') Press
                 li
                   a.text-gray-400.hover_text-gray-300(href='#') Contact Us
-        p.lg_text-center.text-sm.text-gray-400.border-t.border-gray-800.pt-12.mt-16 © 2021. All rights reserved.
+        p.lg_text-center.text-sm.text-gray-400.border-t.border-gray-800.pt-12.mt-16 © #{new Date().getFullYear()} #{thisApp.name} Inc. All rights reserved.
     .skew.skew-bottom.mr-for-radius
       svg.h-8.md_h-12.lg_h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
         polygon(fill='currentColor' points='0 0 10 0 0 10')
     .skew.skew-bottom.ml-for-radius
       svg.h-8.md_h-12.lg_h-20.w-full.text-gray-900(viewBox='0 0 10 10' preserveAspectRatio='none')
         polygon(fill='currentColor' points='0 0 10 0 10 10')
+  script(src="https://js.stripe.com/v3/")
+  if (fbtracker && fbtracker.is_ga_enabled)
+    script(src=asset("/javascripts/ganalytics.js"))
+  if fbtracker && fbtracker.tracking == "on" && fbtracker.trackid
+    script(src=asset('/javascripts/fb-tracker.js'))

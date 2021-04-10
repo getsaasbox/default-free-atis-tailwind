@@ -1,7 +1,7 @@
 mixin navbar()
     section
         nav.relative.px-6.py-6.flex.justify-between.items-center.bg-gray-900
-          a.text-white.text-3xl.font-bold.leading-none(href='#')
+          a.text-white.text-3xl.font-bold.leading-none(href='/')
             img.h-12(src=asset('atis-assets/logo/atis/atis-mono-white.svg') alt width='auto')
           .lg_hidden
             button.navbar-burger.flex.items-center.text-white.p-3
@@ -10,7 +10,7 @@ mixin navbar()
                 path(d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z')
           ul.hidden.absolute.top-1_2.left-1_2.transform.-translate-y-1_2.-translate-x-1_2.lg_flex.lg_mx-auto.lg_flex.lg_items-center.lg_w-auto.lg_space-x-6
             li
-              a.text-sm.text-gray-300.hover_text-white(href='#') Start
+              a.text-sm.text-gray-300.hover_text-white(href='/pricing') Start
             li.text-gray-800
               svg.w-4.h-4.current-fill(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
                 path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z')
@@ -20,17 +20,17 @@ mixin navbar()
               svg.w-4.h-4.current-fill(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
                 path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z')
             li
-              a.text-sm.text-gray-300.hover_text-white(href='#') Services
+              a.text-sm.text-gray-300.hover_text-white(href='/features') Features
             li.text-gray-800
               svg.w-4.h-4.current-fill(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
                 path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z')
             li
-              a.text-sm.text-gray-300.hover_text-white(href='#') Platform
+              a.text-sm.text-gray-300.hover_text-white(href='/pricing') Pricing
             li.text-gray-800
               svg.w-4.h-4.current-fill(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor')
                 path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z')
             li
-              a.text-sm.text-gray-300.hover_text-white(href='#') Testimonials
+              a.text-sm.text-gray-300.hover_text-white(href='/blog') Blog
           if !currentUser
             a.hidden.lg_inline-block.lg_ml-auto.lg_mr-3.py-2.px-6.text-sm.text-white.font-bold.border-2.border-gray-800.hover_border-gray-700.rounded-l-xl.rounded-t-xl.transition.duration-200(href='/login') Sign In
             a.hidden.lg_inline-block.py-2.px-6.bg-green-500.hover_bg-green-600.text-sm.text-white.font-bold.rounded-l-xl.rounded-t-xl.transition.duration-200(href='/signup') Sign up
@@ -60,15 +60,15 @@ mixin navbar()
             div
               ul
                 li.mb-1
-                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover_bg-green-50.hover_text-green-600.rounded(href='#') Start
+                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover_bg-green-50.hover_text-green-600.rounded(href='/pricing') Start
                 li.mb-1
-                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover_bg-green-50.hover_text-green-600.rounded(href='#') About Us
+                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover_bg-green-50.hover_text-green-600.rounded(href='/about-us') About Us
                 li.mb-1
-                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover_bg-green-50.hover_text-green-600.rounded(href='#') Services
+                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover_bg-green-50.hover_text-green-600.rounded(href='/features') Features
                 li.mb-1
-                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover_bg-green-50.hover_text-green-600.rounded(href='#') Platform
+                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover_bg-green-50.hover_text-green-600.rounded(href='/pricing') Pricing
                 li.mb-1
-                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover_bg-green-50.hover_text-green-600.rounded(href='#') Testimonials
+                  a.block.p-4.text-sm.font-semibold.text-gray-400.hover_bg-green-50.hover_text-green-600.rounded(href='/blog') Blog
             .mt-auto
               if !currentUser
                 .pt-6
