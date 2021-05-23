@@ -1,5 +1,5 @@
 {
-    "description": "Free Atis Dark template based on Tailwind UI.",
+    "description": "A high quality and free SaaS frontend template based on Atis Dark template using Tailwind CSS. Includes marketing pages, user sign up pages, a SaaS dashboard / portal area.",
     "assets": "assets",
     "ignore": [".git", ".config.json", "tailwind.config.js", "README.md", "README.txt", "LICENSE", ".gitignore", ".DS_Store"]
 }
